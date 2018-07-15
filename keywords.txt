@@ -6,7 +6,7 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-ESP32CAN	KEYWORD1	ESP32CAN
+ESP32CAN	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
