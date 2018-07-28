@@ -73,7 +73,7 @@ static void CAN_isr(void *arg_p) {
 	                  | __CAN_IRQ_ARB_LOST         // 0x40
 	                  | __CAN_IRQ_BUS_ERR          // 0x80
 	                  )) != 0) {
-		xSemaphoreGive(sem_tx_complete);
+		xSemaphoreGiveFromISR(sem_tx_complete, &higherPriorityTaskWoken);
 	}
 
 	// check if any higher priority task has been woken by any handler
