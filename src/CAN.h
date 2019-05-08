@@ -71,6 +71,7 @@ typedef struct {
 	union {
 		uint8_t u8[8];   /**< \brief Payload byte access*/
 		uint32_t u32[2]; /**< \brief Payload u32 access*/
+		uint64_t u64;    /**< \brief Payload u64 access*/
 	} data;
 } CAN_frame_t;
 
