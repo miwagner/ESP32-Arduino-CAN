@@ -1,3 +1,4 @@
+#include <Arduino.h>
 #include <ESP32CAN.h>
 #include <CAN_config.h>
 
