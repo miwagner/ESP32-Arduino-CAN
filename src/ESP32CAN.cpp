@@ -1,8 +1,8 @@
 #include "ESP32CAN.h"
 
-int ESP32CAN::CANInit()
+int ESP32CAN::CANInit(const CAN_device_t p_CAN_cfg)
 {
-    return CAN_init();
+    return CAN_init(p_CAN_cfg);
 }
 int ESP32CAN::CANWriteFrame(const CAN_frame_t* p_frame)
 {

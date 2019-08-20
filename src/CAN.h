@@ -98,7 +98,7 @@ typedef struct {
  *
  * \return 0 CAN Module had been initialized
  */
-int CAN_init(void);
+int CAN_init(const CAN_device_t p_CAN_cfg);
 
 /**
  * \brief Send a can frame
