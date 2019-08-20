@@ -32,7 +32,7 @@ void setup() {
   ESP32Can.CANConfigFilter(&p_filter);
 
   // Init CAN Module
-  ESP32Can.CANInit();
+  ESP32Can.CANInit(CAN_cfg);
 }
 
 void loop() {
@@ -63,4 +63,3 @@ void loop() {
     }
   }
 }
-

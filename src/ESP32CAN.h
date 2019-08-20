@@ -7,8 +7,8 @@
 class ESP32CAN
 {
     public: 
-        int CANInit();
-		int CANConfigFilter(const CAN_filter_t* p_filter);
+        int CANInit(const CAN_device_t p_CAN_cfg);
+        int CANConfigFilter(const CAN_filter_t* p_filter);
         int CANWriteFrame(const CAN_frame_t* p_frame);
         int CANStop();
 };

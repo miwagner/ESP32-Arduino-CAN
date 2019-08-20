@@ -61,9 +61,6 @@ typedef struct {
 	TaskHandle_t rx_handle; /**< \brief Handler to FreeRTOS RX task. */
 } CAN_device_t;
 
-/** \brief CAN configuration reference */
-extern CAN_device_t CAN_cfg;
-
 #ifdef __cplusplus
 }
 #endif
