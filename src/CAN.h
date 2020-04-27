@@ -73,6 +73,7 @@ typedef struct {
 		uint32_t u32[2]; /**< \brief Payload u32 access*/
 		uint64_t u64;    /**< \brief Payload u64 access*/
 	} data;
+	double time_us;
 } CAN_frame_t;
 
 typedef enum {
