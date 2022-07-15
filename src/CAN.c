@@ -262,6 +262,20 @@ int CAN_init() {
 	return 0;
 }
 
+int CAN_write_frame_timeout(const CAN_frame_t *p_frame, int waitTick) {
+    if (sem_tx_complete == NULL) {
+        return -1;
+    }
+
+    // Write the frame to the controller
+    CAN_write_frame_phy(p_frame);
+
+    // wait for the frame tx to complete
+    xSemaphoreTake(sem_tx_complete, waitTick);
+
+    return 0;
+}
+
 int CAN_write_frame(const CAN_frame_t *p_frame) {
 	if (sem_tx_complete == NULL) {
 		return -1;
