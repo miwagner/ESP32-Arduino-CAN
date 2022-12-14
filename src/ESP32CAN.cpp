@@ -70,7 +70,7 @@ ESP32CAN_status_t ESP32CAN::CANInit(gpio_num_t tx_pin, gpio_num_t rx_pin, ESP32C
             break;
     }
 
-    return ESP32_CAN_OK;
+    return ESP32CAN_OK;
 }
 
 ESP32CAN_status_t ESP32CAN::CANStop() {
