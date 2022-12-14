@@ -1,24 +1,25 @@
 # Arduino Library for the ESP32 CAN Bus (ESP32-Arduino-CAN)
 
+## V2.0
+This is a rewrite of the original library created by [miwagner](https://github.com/miwagner/ESP32-Arduino-CAN). The old version of this library used registry commands to configure the TWAI[^1] peripheral. Newer versions of the Espressif IDF have built in functions to configure the TWAI peripheral that are more reliable. V2.0 of this library incorporates these new IDF functions in the original function calls of the ESP32-Arduino-CAN library.
+
 ## Features
-
-* Support the CAN Bus from the ESP32 (SJA1000)
-* CAN Messages send and receive 
-* Various Bus speeds
-* Standard and Extended Frames
-* CAN Message Filter
-
-
-
-## Third Party Components
-
-- Arduino-ESP32-CAN-Demo
-  - Arduino CAN Demo from [iotsharing.com - nhatuan84](https://github.com/nhatuan84/arduino-esp32-can-demo)
-
-- ESPCan Driver 
-  - Base CAN Driver from [Thomas Barth](https://github.com/ThomasBarth/ESP32-CAN-Driver) and [Nayar Systems](https://github.com/nayarsystems/ESP32-CAN-Driver)
-  - General [Component CAN Driver Pack](https://github.com/ESP32DE/ESP32-CAN-Driver/tree/Component_CAN_Driver_Pack) Work for ESP-IDF with menuconfig from [rudi ;-)](http://esp32.de)
+* Easily configure the ESP32 TWAI[^1] peripheral
+* CAN Bus messages send and receive
+* Various bus speeds
+* Standard (11bit) and extended (29bit) frames
+* ~~CAN Message Filter~~
 
 ## Usage
-
 See the examples in the [/examples](examples) folder.
+
+## Espressif IDF Documentation
+The Espressif IDF documentation at the link below should be reference first if you encounter any errors. Make sure you are using the most recent IDF version, V5.0 when writing this. 
+
+https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/twai.html#examples
+
+## TODO
+- [ ] Advanced example with RTOS tasks
+- [ ] Implement CAN Message Filter
+
+[^1]: TWAI is the name that Esperssif uses for the CAN peripheral. It stands for *two wire automotive interface*
