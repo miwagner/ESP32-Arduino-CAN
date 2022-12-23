@@ -20,7 +20,7 @@ https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/periph
 
 ## TODO
 - [x] Advanced example with RTOS tasks
-- [ ] Release to main branch, no push to miwagner version
+- [x] Release to main branch, no push to miwagner version
 - [ ] Implement CAN Message Filter
 
 [^1]: TWAI is the name that Esperssif uses for the CAN peripheral. It stands for *two wire automotive interface*
