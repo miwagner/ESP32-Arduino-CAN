@@ -2,8 +2,6 @@
 #define INC_ESP32CAN_H
 
 #include <Arduino.h>
-#include "freertos/FreeRTOS.h"
-#include "freertos/semphr.h"
 #include "driver/gpio.h"
 #include "driver/twai.h"
 
