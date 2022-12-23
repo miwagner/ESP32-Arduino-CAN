@@ -11,17 +11,17 @@ void setup() {
 void loop() {
   twai_message_t rx_frame;
   
-  ESP32Can.CANReadFrame(&rx_frame);
+  if (ESP32CAN_OK == ESP32Can.CANReadFrame(&rx_frame)) {  /* CAN message received*/
+    Serial.print(rx_frame.identifier, HEX);
+    Serial.print(" ");
+    Serial.print(rx_frame.data_length_code);
+    
+    for (int i=0; i<rx_frame.data_length_code; i++) {
+      Serial.print(rx_frame.data[i], HEX);
+    }
 
-  Serial.print(rx_frame.identifier, HEX);
-  Serial.print(" ");
-  Serial.print(rx_frame.data_length_code);
-  
-  for (int i=0; i<rx_frame.data_length_code; i++) {
-    Serial.print(rx_frame.data[i], HEX);
+    Serial.println();
   }
-
-  Serial.println();
   
   delay(1000);
 }
