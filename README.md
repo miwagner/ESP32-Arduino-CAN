@@ -19,7 +19,7 @@ The Espressif IDF documentation at the link below should be reference first if y
 https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/twai.html#examples
 
 ## TODO
-- [*] Advanced example with RTOS tasks
+- [x] Advanced example with RTOS tasks
 - [ ] Release to main branch, no push to miwagner version
 - [ ] Implement CAN Message Filter
 
