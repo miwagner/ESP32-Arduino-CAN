@@ -8,12 +8,10 @@
 #include "driver/twai.h"
 
 /* Defines ------------------------------------------------------------------- */
-#ifndef ESP32CAN_DEBUG
-#define ESP32CAN_DEBUG     1    /* 1 to serial print */
-#endif
+#define ESP32CAN_DEBUG     /* serial print debug info */
 
 /* Macros -------------------------------------------------------------------- */
-#if (ESP32CAN_DEBUG == 1)
+#ifdef ESP32CAN_DEBUG
 #define debugPrint(x) 	    Serial.print(x)
 #define debugPrintln(x)	    Serial.println(x)
 #else
