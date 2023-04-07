@@ -29,6 +29,7 @@
  *
  */
 
+#include "esp_system.h"
 #include "CAN.h"
 
 #include "freertos/FreeRTOS.h"
@@ -227,6 +228,14 @@ int CAN_init() {
 
 	// enable all interrupts
 	MODULE_CAN->IER.U = 0xff;
+
+	esp_chip_info_t chip_info;
+    esp_chip_info(&chip_info);
+    if(chip_info.revision >=2){
+        // disable wake-up interrupt
+		// refer to https://github.com/sandeepmistry/arduino-CAN/issues/75 for the original information
+        MODULE_CAN->IER.B.WUIE = 0x0;
+    }	
 
 	 // Set acceptance filter	
 	MODULE_CAN->MOD.B.AFM = __filter.FM;	
