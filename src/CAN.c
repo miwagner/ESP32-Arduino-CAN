@@ -226,7 +226,7 @@ int CAN_init() {
 	MODULE_CAN->BTR1.B.SAM = 0x1;
 
 	// enable all interrupts
-	MODULE_CAN->IER.U = 0xff;
+	MODULE_CAN->IER.U = 0xef;
 
 	 // Set acceptance filter	
 	MODULE_CAN->MOD.B.AFM = __filter.FM;	
