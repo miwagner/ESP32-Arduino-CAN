@@ -15,7 +15,7 @@ void setup() {
   Serial.println("ESP32-Arduino-CAN Send Basic Demo");
 
   /* initialize and start, use pin 5 as CAN_tx and pin 4 as CAN_rx, CAN bus is set to 500kbps */
-  ESP32Can.CANInit(GPIO_NUM_5, GPIO_NUM_4, ESP32_SPEED_500KBPS);
+  ESP32Can.CANInit(GPIO_NUM_5, GPIO_NUM_4, ESP32CAN_SPEED_500KBPS );
 }
 
 void loop() {
